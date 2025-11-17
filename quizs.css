@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Vazirmatn", sans-serif;
+    direction: ltr;
+}
+
+body {
+    background: linear-gradient(135deg,
+    #050509 0%,
+    #0c0f22 12%,
+    #1b1e36 25%,
+    #2d2750 38%,
+    #4a3370 50%,
+    #7a56a8 60%,
+    #b4a6d6 72%,
+    #655c98 84%,
+    #edacac 100%);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s infinite alternate;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes gradientFlow {
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    padding: 20px;
+}
+
+.top-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.user-box, .score-box {
+    background: rgba(255,255,255,0.25);
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 18px;
+    color: white;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px #ffffff3a;
+}
+
+.quiz-card {
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    box-shadow: 0 0 30px rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+.quiz-card h2 {
+    color: white;
+    margin-bottom: 25px;
+    font-size: 26px;
+}
+
+#answer-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.btn {
+    padding: 18px;
+    border: none;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.7);
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+.correct {
+    background: #00ff88 !important;
+    color: black;
+}
+
+.incorrect {
+    background: #ff3c3c !important;
+    color: white;
+}
+
+#next-btn {
+    margin-top: 30px;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 15px;
+    background: #ff0099;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+#next-btn:hover {
+    transform: translateY(-5px);
+    background: #ff33aa;
+}
+
+.animate {
+    animation: fadeIn 0.9s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
